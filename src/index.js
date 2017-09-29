@@ -1,7 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
-import App from './components/App'
+import PPL from './components/PPL'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import CustomTheme from './CustomTheme'
 
-const rootElement = document.getElementById('main');
-
-render(<App />, document.getElementById('root'));
+render(
+    <MuiThemeProvider theme={CustomTheme}>
+        <PPL />
+    </MuiThemeProvider>
+    , document.querySelector('#root'));
