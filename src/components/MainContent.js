@@ -1,23 +1,17 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
-import AppBar from 'material-ui/AppBar'
-import Tabs, { Tab } from 'material-ui/Tabs'
-
-import Logo from '../images/logo.png';
 
 import Hero from './Hero'
-import Pitch from './Pitch'
-import IntroShort from './IntroShort'
+import Nav from './Nav'
+import Home from './Home'
 import Intro from './Intro'
 import Process from './Process'
-import Situation from './Situation'
-import Expectation from './Expectation'
-import Testimony from './Testimony'
+import PastDeal from './PastDeal'
+import AboutMe from './AboutMe'
+import Philosophy from './Philosophy'
 import Faq from './Faq'
-import Links from './Links'
 import Contact from './Contact'
-import MailingList from './MailingList'
-import Footer from './Footer'
+
 
 export default class MainContent extends React.Component {
   constructor() {
@@ -36,54 +30,11 @@ export default class MainContent extends React.Component {
     const { value } = this.state;
     return (
       <div>
-        <AppBar position="static" color="default">
-          <Tabs value={value} 
-                onChange={this.handleChange}
-                indicatorColor="primary"
-                textColor="primary"
-                scrollable
-                scrollButtons="auto">
-            <Tab label="Home" />
-            <Tab label="What I Do" />
-            <Tab label="How It Works"/>
-            <Tab label="FAQ"/>
-            <Tab label="Past Deals"/>
-            <Tab label="About Me"/>
-            <Tab label="My Philosophy"/>
-            <Tab label="Contact"/>
-          </Tabs>
-        </AppBar>
+        <Nav onClickHandle={this.handleChange}/>
         <Hero />
-        {value === 0 && <div>
-          <Pitch />
-          <Grid container>
-            <Grid item xs={12} md={6}>
-              <IntroShort />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Process />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Situation />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Expectation />
-            </Grid>
-          </Grid>
-          <Testimony />
-          <Faq />
-          <Grid container>
-            <Grid item xs={12} md={4}>  
-              <Links />
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Contact />
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <MailingList />
-            </Grid>
-          </Grid>
-        </div>}
+        {value === 0 && 
+          <Home />
+        }
         {value === 1 && <div>
           <Intro />
         </div>}
@@ -94,18 +45,17 @@ export default class MainContent extends React.Component {
           <Faq />
         </div>}
         {value === 4 && <div>
-          {"Past Deal"}
+          <PastDeal />
         </div>}
         {value === 5 && <div>
-          {"About Me"}
+          <AboutMe />
         </div>}
-        {value === 5 && <div>
-          {"My philosophy"}
+        {value === 6 && <div>
+          <Philosophy />
         </div>}
-        {value === 5 && <div>
+        {value === 7 && <div>
           <Contact />
         </div>}
-        <Footer />
       </div>
     )
   }

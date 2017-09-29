@@ -1,28 +1,27 @@
 import React from 'react';
-import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 
-const Links = () => (
+const Contacts = () => (
   <div>
     <Typography type="display2" style={{color: 'white'}}>
-      Recent Transactions
+      Get In Touch
     </Typography>
     <Typography type="body1" component="li" style={{color: 'white'}}>
-      Condo in Des Moines 
+      Clear Vision Investments 
     </Typography>
     <Typography type="body1" component="li" style={{color: 'white'}}>
-      House Tear-down in Lynnwood 
+      1123 Maple Avenue SW, Suite #110 
     </Typography>
     <Typography type="body1" component="li" style={{color: 'white'}}>
-      Major Fixer in North Seattle 
+      Renton, WA 98057 
     </Typography>
     <Typography type="body1" component="li" style={{color: 'white'}}>
-      Short Sale in Snohomish 
+      Phone: 206-203-8338 
     </Typography>
     <Typography type="body1" component="li" style={{color: 'white'}}>
-      Joint Venture with Seller in Federal Way
+      Email: phong@fairhousebuyer.com 
     </Typography>
   </div>
 );
  
-export default Links;
+export default Contacts;

@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from 'material-ui/Typography';
 
 const PPL = () => (
-  <div>
+  <div style={{marginBottom: '20px'}}>
     <Typography type="headline" component="h3">
       What I Can Do
     </Typography>
