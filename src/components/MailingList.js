@@ -1,20 +1,21 @@
 import React from 'react';
 import Typography from 'material-ui/Typography';
+import TextField from 'material-ui/TextField';
+import Button from 'material-ui/Button';
 
-const PPL = () => (
+const MailingList = () => (
   <div>
-    <Typography type="headline" component="h3">
-      What You Can Expect From Me
+    <Typography type="display2" style={{color: 'white'}}>
+      Join The Mailing List
     </Typography>
-    <Typography type="body1" component="p">
-      • I make my own purchasing decision so you would not have to deal with anyone else from my side.
-• I buy AS-IS and will close quickly.
-• I will provide everything in writing and will deposit the earnest money as well as anything else that is expected of me in a timely manner.
-• I will would not pressure you into doing something you don’t want.
-• I will provide prompt responses and routine status updates of the transaction.
-• All information you provide shall also be kept private and confidential.
-    </Typography>
+    <TextField
+      label="Your Email Address"
+      placeholder="name@example.com"
+      margin="normal"
+      color="secondary"
+        />
+    <Button raised>Submit</Button>
   </div>
 );
  
-export default PPL;
+export default MailingList;

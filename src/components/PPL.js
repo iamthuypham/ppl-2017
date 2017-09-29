@@ -7,13 +7,15 @@ import Footer from './Footer'
 
 const PPL = () => (
   <Grid container 
-        style={{height: '100%', backgroundColor:'grey'}}
+        style={{backgroundColor:'grey'}}
         align='stretch'
         direction='row'
         justify='center'>
     <Grid item xs={12} md={10} style={{backgroundColor:'white', padding:'0'}}>
       <Header />
       <MainContent />
+    </Grid>
+    <Grid item xs={12} md={10} style={{backgroundColor:'#000023'}}>
       <Footer />
     </Grid>
   </Grid>

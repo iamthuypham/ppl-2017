@@ -1,19 +1,32 @@
 import React from 'react';
+
 import Grid from 'material-ui/Grid';
+import Paper from 'material-ui/Paper';
+import Typography from 'material-ui/Typography';
 
 import Logo from '../images/logo.png';
 
 const PPL = () => (
   <Grid container 
-        align='baseline'
-        direction='row'
-        justify='space-between'
-        style={{padding:'8px'}}>
-    <Grid item xs={12} md={3}>
-      <img src={Logo}/>
-    </Grid>
-    <Grid item xs={12} md={3}>
-      <div>Call Zelenka Stacey</div>
+        align='center'
+        direction='column'
+        justify='center'
+        style={{paddingTop:'10px', paddingBottom:'10px'}}>
+    <Grid item xs={11}>
+      <Grid container
+            align='center'
+            direction='row'
+            justify='space-between'>
+        <Grid item xs={12} md={3}>
+          <img src={Logo}/>
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <Paper style={{textAlign: 'center', padding: '8px'}}>
+            <Typography type="display1">Call Zelenka Stacey</Typography>
+            <Typography type="headline">---.---.---</Typography>
+          </Paper>
+        </Grid>
+      </Grid>
     </Grid>
   </Grid>
 );
