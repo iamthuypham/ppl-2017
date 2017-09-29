@@ -9,7 +9,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node server.js",
     "web-prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=webpack.config.js",
-    "web-dev": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base public/ --config webpack.config.js --port 8080 --inline --hot --colors",
+    "web-dev": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base public/ --config webpack.config.js --port $PORT --host $IP --inline --hot --colors",
     "postinstall": "webpack -p"
   },
   "dependencies": {
@@ -29,6 +29,9 @@
   "devDependencies": {
     "babel-preset-es2016": "^6.24.1",
     "cross-env": "^5.0.5",
+    "file-loader": "^0.11.2",
+    "material-ui": "^1.0.0-beta.12",
+    "material-ui-icons": "^1.0.0-beta.10",
     "request": "^2.81.0",
     "tape": "^4.7.0",
     "webpack-dev-server": "^2.7.1"
