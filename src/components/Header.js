@@ -22,7 +22,7 @@ const PPL = () => (
         </Grid>
         <Grid item xs={12} md={3}>
           <Paper style={{textAlign: 'center', padding: '8px'}}>
-            <Typography type="display1">Call Zelenka Stacey</Typography>
+            <Typography type="display1">Call Zelenka Tracy</Typography>
             <Typography type="headline">---.---.---</Typography>
           </Paper>
         </Grid>
